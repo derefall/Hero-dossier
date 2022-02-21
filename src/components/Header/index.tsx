@@ -1,3 +1,4 @@
+import react from 'react'
 import Button from "../Button";
 
 import './styles.scss';

@@ -1,0 +1,79 @@
+@import '../../../../assets/styles/global.scss';
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content{
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    width: 30%;
+}
+
+.img-container{
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: center;
+
+    img{
+        border-radius: 20px;
+        width: 210px;
+    }
+}
+
+.content-container{
+    margin-left: 20px;
+
+    h3{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+.position-relative{
+    position: relative;
+}
+
+.background-red{
+    position: absolute;
+    left: -8px;
+    padding-right: 10px;
+    top: -8px;
+    border-radius: 20px;
+    background-color: #A72122;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+}
+
+.icons-container{
+
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        li{
+
+            margin: 5px 20px;
+
+            div{
+                padding-left: 20px;
+
+                p{
+                    color: #8790AF;
+                }
+            }
+
+            
+        }
+    }
+
+}

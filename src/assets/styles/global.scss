@@ -1,8 +1,67 @@
 @import 'abstract/_variables.scss';
 
-body, button, a{
+body, button, a, p{
     background-color: $background-page;
-    font-family: $title-page;
+    font-family: $font-page;
     color: $font-color;
     font-size: $global-font-size;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: $title-page;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+h1{
+    font-size: 70px;
+}
+
+.characterTitle{
+    font-size: 25px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+//Divisor
+
+.line::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #6D80C2;
+    position: absolute;
+    bottom: -15px;
+    
+}
+
+.line{
+    width: 100%;
+    position: relative;
+}
+
+//Margins and Paddings
+
+.mt-50{
+    margin-top: 50px;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+//inputs
+
+.default-input{
+    background-color: #141E40;
+    color: #6572A0;
+    border-radius: 16px;
+    border: transparent;
+    height: 35px;
+    width: 250px;
+    padding: 0 15px;
 }
