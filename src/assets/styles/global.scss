@@ -1,11 +1,18 @@
 @import 'abstract/_variables.scss';
 
+@import 'abstract/breakpoints';
+
+body{
+    margin: 0;
+    padding:0;
+}
+
 body, button, a, p{
     background-color: $background-page;
     font-family: $font-page;
     color: $font-color;
     font-size: $global-font-size;
-    font-weight: 400;
+    font-weight: 400;    
 }
 
 h1, h2, h3, h4, h5{
@@ -19,6 +26,10 @@ p{
 
 h1{
     font-size: 70px;
+
+    @include breakpoint(extra-small){
+        font-size: 48px;
+    }
 }
 
 .characterTitle{
@@ -33,7 +44,7 @@ h1{
     content: '';
     width: 100%;
     height: 1px;
-    background-color: #6D80C2;
+    background-color: $auxiliar-color;
     position: absolute;
     bottom: -15px;
     
@@ -63,5 +74,35 @@ h1{
     border: transparent;
     height: 35px;
     width: 250px;
-    padding: 0 15px;
+    padding: 0 30px 0 15px;
+
+}
+
+select{
+      /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.select{
+    position: relative;
+}
+
+.select::after{
+content: '\25BC';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+input::placeholder{
+    color: #6572A0!important;
 }

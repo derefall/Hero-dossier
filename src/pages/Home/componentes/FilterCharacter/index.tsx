@@ -1,6 +1,6 @@
 import Filter from "./components/Filter";
 
-import '../../assets/styles/global.scss';
+import '../../../../assets/styles/global.scss';
 import CardCharacter from "./components/CardCharacter";
 
 export default function FilterCharacter(){

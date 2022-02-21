@@ -1,0 +1,33 @@
+
+.character-container{
+    display: flex;
+    justify-content:center;
+}
+
+.img-content{
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+
+    img{
+        border-radius: 20px;
+        width: 180px;
+    }
+}
+
+.character-content{
+    width: 60%;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        color: #8790AF;
+    }
+}

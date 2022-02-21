@@ -1,0 +1,10 @@
+@import '../../assets/styles/global.scss';
+
+.background-footer{
+    background-color: $third-color;
+    height: 50px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

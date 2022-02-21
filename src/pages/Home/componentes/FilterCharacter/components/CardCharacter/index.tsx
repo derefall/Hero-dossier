@@ -1,14 +1,12 @@
 import ReactDOM from 'react-dom'
+import './styles.scss'
+
+import Button from "../../../../../../components/Button/index";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-import Button from "../../../Button";
-
-import './styles.scss'
-const charImg = require("../../../../assets/images/a-bomb.jpg");
-
-
-
+const charImg = require("../../../../../../assets/images/a-bomb.jpg");
 
 export default function CardCharacter(){
 
