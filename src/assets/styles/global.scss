@@ -1,0 +1,8 @@
+@import 'abstract/_variables.scss';
+
+body, button, a{
+    background-color: $background-page;
+    font-family: $title-page;
+    color: $font-color;
+    font-size: $global-font-size;
+}

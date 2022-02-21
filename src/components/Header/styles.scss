@@ -1,0 +1,35 @@
+@import '../../assets/styles/global.scss';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;    
+    padding: 0 20px;
+
+    ul{
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li{
+            margin-right: 20px;
+        }
+    }
+}
+
+.line::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $fourth-color;
+    position: absolute;
+    bottom: -15px;
+    
+}
+
+.line{
+    width: 100%;
+    position: relative;
+}

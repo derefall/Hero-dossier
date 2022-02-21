@@ -1,0 +1,16 @@
+@import '../../assets/styles/global.scss';
+
+button{
+    min-width: 180px;
+    min-height: 40px;
+    border-radius: 50px;
+    border-color: transparent;
+}
+
+.red{
+    background-color: $second-color;
+}
+
+.blue{
+    background-color: $first-color;
+}
