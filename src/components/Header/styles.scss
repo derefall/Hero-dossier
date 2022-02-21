@@ -3,6 +3,7 @@
 .header{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     margin-top: 30px;
     align-items: center;    
     padding: 0 20px;
@@ -14,12 +15,13 @@
         padding: 0;
 
         li{
-            margin-right: 20px;
+            margin-right: 0;
+            margin-bottom: 20px;
             position: relative;   
 
             @include breakpoint(extra-small){
-                margin-bottom: 20px;
-                margin-right: 0;
+                margin-bottom: 0;
+                margin-right: 20px;
             }
             
         }
@@ -43,6 +45,6 @@
     }
 
     @include breakpoint(extra-small){
-        flex-direction: column;
+        flex-direction: row;
     }
 }

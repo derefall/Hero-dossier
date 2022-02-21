@@ -1,11 +1,12 @@
 .form-filter{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .search-icon{
     position: absolute;
     color: #D9D8D8;
-    top: 8px;
+    top: 18px;
     right: 15px;
 }
