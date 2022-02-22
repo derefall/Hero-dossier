@@ -27,7 +27,7 @@ export default function Header(){
                 <ul>
                     <li onClick={()=>{navigate('/')}} className={className}>Home</li>
                 </ul>
-                <Button text="Minha conta" theme="red" onClick={()=>{navigate('/account')}}/>
+                <Button text="My Account" theme="red" onClick={()=>{navigate('/account')}}/>
              </div>
         </div>
     )
