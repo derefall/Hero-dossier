@@ -1,143 +1,85 @@
-import ReactDOM from 'react-dom'
+import React, { useEffect, useState } from 'react';
 import './styles.scss'
+
+import {herosProps} from '../../../../../../types/heros/index'
 
 import Button from "../../../../../../components/Button/index";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-
-const charImg = require("../../../../../../assets/images/a-bomb.jpg");
+import { faBookOpen, faBookOpenReader, faTv, faPerson } from '@fortawesome/free-solid-svg-icons'
+import  { useNavigate }  from 'react-router-dom';
+import { getHeros } from '../../../../../../services/marvelApi';
+import { HerosContext } from '../../../../../../contexts/HerosContext';
 
 export default function CardCharacter(){
 
-    const element = <FontAwesomeIcon icon={faCoffee} />
+    const comic = <FontAwesomeIcon icon={faBookOpen} />
+    const stories = <FontAwesomeIcon icon={faBookOpenReader} />
+    const series = <FontAwesomeIcon icon={faTv} />
+    const events = <FontAwesomeIcon icon={faPerson} />
+
+    const navigate = useNavigate();
+
+    const portrait = '/portrait_xlarge.';
+
+    const {heros} = React.useContext(HerosContext)    
+
+    function handleCharacterId(id: number){
+        navigate('/characters/' + id);      
+
+    }
 
     return(
         <>
             <div className="row">
 
-                <div className="content">
+            {
+                heros? heros.map((hero: herosProps) => (
+
+                    <div className="content" key={hero.id}>
                     <div className="img-container">
                         <div className="position-relative">                        
-                            <img src={charImg}/>
+                            <img src={hero.thumbnail.path + portrait + hero.thumbnail.extension}/>
                             <div className="background-red"></div>
                         </div>                    
                     </div>
                     <div className="content-container">
-                        <h3>A-Bom (HAS)</h3>
-                        <p>Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's 
-                            a teammate! Transformed by a Gamma .... Ver mais</p>
+                        <h3>{hero.name}</h3>
+                        <p className="description-hero">{hero.description}                            
+                        </p>
+                        <a onClick={()=>{handleCharacterId(hero.id)}}>Read more</a>
                             <div className="icons-container">
                                 <ul>
-                                    <li>{element} 4
+                                    <li>{comic} {hero.comics.available}
                                         <div>
                                             <p>Comics</p>
                                         </div>
                                     </li>
-                                    <li>{element} 4
+                                    <li>{stories} {hero.series.available}
                                         <div>
-                                            <p>Comics</p>
+                                            <p>Series</p>
                                         </div>
                                     </li>                                    
                                 </ul>
                                 <ul>
-                                <li>{element} 4
+                                <li>{series} {hero.stories.available}
                                         <div>
-                                            <p>Comics</p>
+                                            <p>Stories</p>
                                         </div>
                                     </li>
-                                    <li>{element} 4
+                                    <li>{events} {hero.events.available}
                                         <div>
-                                            <p>Comics</p>
+                                            <p>Events</p>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                        <Button text="Add to favorite" theme="red" onClick={()=>{}}/>
+                            <Button text="Add to favorite" theme="red" onClick={()=>{}}/>
                     </div>
                 </div>
 
-                <div className="content">
-                    <div className="img-container">
-                        <div className="position-relative">                        
-                            <img src={charImg}/>
-                            <div className="background-red"></div>
-                        </div>                    
-                    </div>
-                    <div className="content-container">
-                            <h3>A-Bom (HAS)</h3>
-                            <p>Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's 
-                                a teammate! Transformed by a Gamma .... Ver mais</p>
-                                <div className="icons-container">
-                                    <ul>
-                                        <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>
-                                        <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>                                    
-                                    </ul>
-                                    <ul>
-                                    <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>
-                                        <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            <Button text="Add to favorite" theme="red" onClick={()=>{}}/>
-                        </div>
-                </div>
-
-                <div className="content">
-                    <div className="img-container">
-                        <div className="position-relative">                        
-                            <img src={charImg}/>
-                            <div className="background-red"></div>
-                        </div>                    
-                    </div>
-                    <div className="content-container">
-                            <h3>A-Bom (HAS)</h3>
-                            <p>Rick Jones has been Hulk's best bud since day one, but now he's more than a friend...he's 
-                                a teammate! Transformed by a Gamma .... Ver mais</p>
-                                <div className="icons-container">
-                                    <ul>
-                                        <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>
-                                        <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>                                    
-                                    </ul>
-                                    <ul>
-                                    <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>
-                                        <li>{element} 4
-                                            <div>
-                                                <p>Comics</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            <Button text="Add to favorite" theme="red" onClick={()=>{}}/>
-                        </div>
-                </div>
+                )) : 'Loading...'
+            }
                 
             </div>
         </>

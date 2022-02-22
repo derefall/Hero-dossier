@@ -1,12 +1,15 @@
-import react from 'react'
+import React from 'react'
 import './styles.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { HerosContext } from '../../../../../../contexts/HerosContext'
 
 
 export default function Filter(){
     const search = <FontAwesomeIcon icon={faMagnifyingGlass} />
+
+    const {paramters, setParamters} = React.useContext(HerosContext);
 
     return(
         <>
@@ -18,6 +21,8 @@ export default function Filter(){
                         className="default-input"
                         type="text"
                         placeholder='Hero name'
+                        onChange={(e) => setParamters(e.target.value)}
+                        value={paramters}
                         />
                         <div className="search-icon">{search}</div>
                    </div>

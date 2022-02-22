@@ -12,12 +12,6 @@ export default function Home(){
                 <p className="subtitle">Seu arquivo com todos os heróis da Marvel</p>
             </div>
 
-            {/* <div className="line">
-                <div className="charTitle">
-                    <p>Os principais personagens</p>
-                </div>
-            </div> */}
-
             <div className="mt-100">
                 <FilterCharacter/>
             </div>

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export type ButtonProps = {
-    onClick: ()=>void,
+    onClick: ()=>any,
     theme: ButtonTheme,
     text: string,
     icon?: string,    

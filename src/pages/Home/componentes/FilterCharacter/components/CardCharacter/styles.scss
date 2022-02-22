@@ -63,6 +63,9 @@
 
 .content-container{
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     h3{
         font-size: 30px;
@@ -71,6 +74,23 @@
 
     p{
         width: 90%;
+    }
+
+    a{
+        cursor: pointer;
+    }
+
+    .description-hero{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px;     
+        max-height: 64px;      
+        -webkit-line-clamp: 4; 
+        -webkit-box-orient: vertical;
+
+        color: $auxiliar-color;
+        font-weight: 300;
     }
 }
 
@@ -84,7 +104,7 @@
     padding-right: 10px;
     top: -8px;
     border-radius: 20px;
-    background-color: #A72122;
+    background-color: $background-card-red;
     height: 100%;
     width: 100%;
     z-index: -5;
