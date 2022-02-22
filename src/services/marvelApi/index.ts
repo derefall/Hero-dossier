@@ -1,5 +1,5 @@
 import api from '../index';
-const key = '?ts=1&apikey=3947fb879368e816e4a997495b3a49aa&hash=afb5985cd38bfc27eb71a885782a3d20';
+const key = '?ts=1&apikey=351a2974505301fcb90be16bb7458387&hash=fcc4ffe7ef99cf0c9ab4cdea9d964c89';
 
 async function getHeros(){    
     const {data} = await api.get('characters' + key);
