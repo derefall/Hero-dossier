@@ -9,7 +9,7 @@ export default function Home(){
 
             <div className="mt-50">
                 <h1>Hero dossier</h1>
-                <p className="subtitle">Seu arquivo com todos os heróis da Marvel</p>
+                <p className="subtitle">Your dossier with all Marvel heroes </p>
             </div>
 
             <div className="mt-100">

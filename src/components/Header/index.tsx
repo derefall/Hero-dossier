@@ -1,5 +1,5 @@
 import react from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Button from "../Button";
 
 import './styles.scss';
@@ -8,6 +8,8 @@ export default function Header(){
 
     const {id} = useParams();
     let className = 'active';    
+
+    const navigate = useNavigate();
 
     function isActive(){
 
@@ -23,9 +25,9 @@ export default function Header(){
         <div className="line">
              <div className="header">
                 <ul>
-                    <li className={className}>Home</li>
+                    <li onClick={()=>{navigate('/')}} className={className}>Home</li>
                 </ul>
-                <Button text="Minha conta" theme="red" onClick={()=>{}}/>
+                <Button text="Minha conta" theme="red" onClick={()=>{navigate('/account')}}/>
              </div>
         </div>
     )

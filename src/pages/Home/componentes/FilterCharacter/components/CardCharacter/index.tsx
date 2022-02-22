@@ -7,8 +7,9 @@ import Button from "../../../../../../components/Button/index";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen, faBookOpenReader, faTv, faPerson } from '@fortawesome/free-solid-svg-icons'
+
 import  { useNavigate }  from 'react-router-dom';
-import { getHeros } from '../../../../../../services/marvelApi';
+
 import { HerosContext } from '../../../../../../contexts/HerosContext';
 
 export default function CardCharacter(){

@@ -1,0 +1,19 @@
+@import '../../../../assets/styles/global.scss';
+
+
+.blueContainer{
+    display: flex;
+    width: 30%;
+    border: transparent;
+    padding: 20px;
+    border-radius: 50px;
+    background-color:$third-color;
+}
+
+.margin-button{
+    margin-bottom: 10px;
+}
+
+.contentContainer{
+    justify-content: space-around;
+}

@@ -28,14 +28,17 @@ export function HerosProvider(props:any){
     
     async function reqHeros() {
         const res = await getHeros();    
-        setHeros(res); 
-        console.log(heros);       
+        setHeros(res);     
     }
 
     async function reqHerosParamters(name:string){
-        const res = await getHeroByName(name);
-        setHeros(res); 
-        console.log(heros); 
+        if(name === undefined || name === ''){
+            reqHeros();
+        }
+        else{
+            const res = await getHeroByName(name);
+            setHeros(res); 
+        }
     }
 
     return(

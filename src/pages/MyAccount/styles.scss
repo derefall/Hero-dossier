@@ -1,0 +1,25 @@
+@import '../../assets/styles/global.scss';
+
+.subtitle{
+    font-size: 24px;
+    margin-left: 80px;
+
+    @include breakpoint(extra-small){
+        font-size: 30px;        
+    }
+}
+
+.container-btn{
+    display: flex;
+    margin-left: 80px;
+
+    a{
+        background-color: #A72122;
+        padding: 5px 10px;
+        border: transparent;
+        border-radius: 50px;
+        margin-left: 10px;
+        width: 80px!important;
+        text-align: center;
+    }
+}

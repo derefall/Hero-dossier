@@ -8,6 +8,7 @@ import Header from './components/Header';
 
 import CharacterId from './pages/CharacterId/index';
 import Home from './pages/Home/index'
+import MyAccount from './pages/MyAccount';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
           <Header/>
             <Routes>
               <Route path="/" element={<Home />}/>
+              <Route path="/account" element={<MyAccount />}/>
               <Route path="/characters/:id" element={<CharacterId />}/>
             </Routes>
           </Container>

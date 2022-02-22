@@ -1,5 +1,5 @@
 import api from '../index';
-const key = '?ts=1&apikey=351a2974505301fcb90be16bb7458387&hash=4612df42cd0d75f731e921788138daa5';
+const key = '?ts=1&apikey=3947fb879368e816e4a997495b3a49aa&hash=afb5985cd38bfc27eb71a885782a3d20';
 
 async function getHeros(){    
     const {data} = await api.get('characters' + key);
@@ -17,6 +17,11 @@ async function getHeroByName(name: string){
             nameStartsWith: name
         }
     });
+    return data.data.results;
+}
+
+async function getComicsByHero(id: string){
+    const {data} = await api.get('comics/'+ id + key, {});
     return data.data.results;
 }
 

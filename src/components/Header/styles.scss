@@ -18,6 +18,7 @@
             margin-right: 0;
             margin-bottom: 20px;
             position: relative;   
+            cursor: pointer;
 
             @include breakpoint(extra-small){
                 margin-bottom: 0;

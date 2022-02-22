@@ -31,7 +31,8 @@ export default function Filter(){
                     <input
                         className="default-input"
                         type="text"
-                        placeholder='Comic name'
+                        placeholder='Not implemented yet'
+                        disabled
                         />
                         <div className="search-icon">{search}</div>
                    </div>
@@ -40,7 +41,8 @@ export default function Filter(){
                     <input
                         className="default-input"
                         type="text"
-                        placeholder='Serie name'
+                        placeholder='Not implemented yet'
+                        disabled
                         />
                         <div className="search-icon">{search}</div>
                    </div>
